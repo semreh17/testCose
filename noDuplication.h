@@ -1,19 +1,21 @@
 #ifndef UNTITLED_NODUPLICATION_H
 #define UNTITLED_NODUPLICATION_H
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class noDuplication {
 private:
     int length;
-    int arr[7];
-    int brr[7] = {INT_MAX, INT_MAX, INT_MAX, INT_MAX, INT_MAX, INT_MAX, INT_MAX};
+    std::vector<int> arr;
+    std::vector<int> brr;
 public:
     //costruttore che inizializza l e arr che sono protected
-    noDuplication(const int a[], int l){
+    noDuplication(std::vector<int>& a, int l){
         length = l;
         for (int i = 0; i<l; i++) {
             arr[i] = a[i];
+            brr[i] = INT_MAX;
         }
     };
 

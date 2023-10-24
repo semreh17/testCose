@@ -10,10 +10,11 @@ private:
     std::vector<int> arr;
     std::vector<int> brr;
 public:
-    //costruttore che inizializza l e arr che sono protected
-    noDuplication(std::vector<int>& a, int l){
+    //constructor that initialize length, arr and brr where
+    //initially brr contains only INT_MAX in every index
+    noDuplication(std::vector<int>& a, int l) : arr(l), brr(l) {
         length = l;
-        for (int i = 0; i<l; i++) {
+        for (int i = 0; i < l; i++) {
             arr[i] = a[i];
             brr[i] = INT_MAX;
         }
@@ -40,4 +41,4 @@ public:
     }
 };
 
-#endif //UNTITLED_NODUPLICATION_H
+#endif //UNTITLED_NODUPLICATION_H0

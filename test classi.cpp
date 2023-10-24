@@ -7,7 +7,6 @@ using namespace std;
 
 
 int main() {
-    //
     std::vector<int> arr;
     int l;
     srand(time(0));
@@ -16,7 +15,7 @@ int main() {
     cin >> l;
     //dynamic allocation of arr with the length insert by the user
     arr.resize(l);
-    for(int i = 0; i < l; i++) {
+    for (int i = 0; i < l; i++) {
         arr[i] = (rand() % l);
         cout << arr[i] << "\t";
     }
@@ -25,4 +24,5 @@ int main() {
 
     noDuplication obj1(arr, l);
     obj1.arrIteration();
+    return 0;
 }
